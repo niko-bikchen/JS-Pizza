@@ -1,3 +1,265 @@
-@mainColor: blue;
+@mainColor: #fd4d0b;
 
 @import "pizza/pizza-card";
+
+@font-face {
+  font-family: "Air America";
+  src:
+          url("../fonts/airamerica-regular-webfont.woff") format("woff"),
+          url("../fonts/airamerica-regular-webfont.woff2") format("woff2"),
+          url("../fonts/AirAmerica-Regular.otf") format("opentype");
+}
+
+#cart{
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding-bottom: 10px;
+
+  #order_head{
+
+    padding: 10px 5px 10px 5px;
+
+    #label{
+      text-align: left;
+      padding: 5px;
+      color: black;
+      font-size: 1.3em;
+      font-weight: 700;
+    }
+    #quantity{
+      text-align: center;
+      padding: 5px 6px 5px 8px;
+      color: white;
+      background-color: darkorange;
+      border-radius: 30px;
+    }
+    #clear{
+      padding: 10px;
+      color: grey;
+      font-size: 0.7em;
+    }
+  }
+
+  #order{
+    .item{
+
+      background-color: whitesmoke;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      border-bottom: lightgrey solid 2px;
+
+      .item_name{
+        color:#fd4d0b;
+        font-size: 1.2em;
+        font-weight: 500;
+      }
+
+      .item_param{
+
+        font-weight: 600;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        .diameter{
+          margin-right: 10px;
+        }
+      }
+
+      .item_price{
+        padding-left: 15px;
+        padding-right: 10px;
+        font-weight: 700;
+      }
+
+      .item_photo{
+        position: absolute;
+        right: 0px;
+        bottom: 265px;
+
+        height: 100px;
+        width: 50px;
+      }
+
+      .item_quantity_and_buttons{
+        .btn{
+          padding-left: 11px;
+          padding-right: 11px;
+          font-weight: 600;
+          font-size: 1em;
+          border: none;
+          border-radius: 20px;
+        }
+
+        .plus_btn{
+          background-color: limegreen;
+        }
+
+        .minus_btn{
+          background-color: red;
+        }
+
+        .cross_btn{
+          margin-left: 20px;
+          font-size: 0.9em;
+          color: white;
+          background-color: darkorange;
+          border: #fd4d0b 1px solid;
+        }
+
+        .quantity{
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+
+  #order_summary{
+
+    padding-top: 10px;
+
+    #price_label{
+      margin-right: 80px;
+      font-weight: 600;
+    }
+
+    #order_price{
+      font-weight: 600;
+    }
+
+    #order_button{
+      margin-top: 10px;
+      background-color: darkorange;
+      border: none;
+    }
+  }
+}
+
+header{
+
+  .navbar{
+    color: white;
+    background-color: black;
+    opacity: 0.8;
+    border-radius: unset;
+  }
+
+  #page_label{
+    p{
+      font-family: "Air America", Arial, sans-serif;
+      text-align: center;
+      font-size: 2em;
+      background-color: #EA862E;
+      margin-top: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  #info{
+    #info_top{
+      border-bottom: darkgrey solid 1px;
+
+      #phone_number{
+        margin-right: 20px;
+        color: darkgrey;
+        font-size: 1.5em;
+      }
+
+      #delivery_info{
+        color: darkgrey;
+        margin-right: 20px;
+      }
+
+      #delivery_free{
+        color: darkgrey;
+        font-size: 1em;
+      }
+
+      .btn{
+        position: relative;
+        left: 450px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: none;
+        background-color: #EA862E;
+
+      }
+    }
+  }
+}
+
+#all_pizza{
+
+  text-align: center;
+
+  #all_pizza_label{
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  #all_pizza_quantity{
+    text-align: center;
+    padding: 5px 8px 5px 10px;
+    color: white;
+    background-color: darkorange;
+    border-radius: 30px;
+  }
+}
+
+#filters{
+  text-align: center;
+  margin-bottom: 20px;
+
+  .filter{
+    color: darkorange;
+    margin-right: 30px;
+  }
+
+  #chosen_filter{
+    color: white;
+    padding: 5px;
+    text-align: center;
+    background-color: darkorange;
+    border-radius: 5px;
+  }
+}
+
+footer{
+  padding-top: 10px;
+  text-align: center;
+  color: darkgrey;
+  border-top: darkgrey solid 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#discount_label{
+  position: fixed;
+  bottom: 0;
+  color: white;
+  font-size: 1.3em;
+  font-weight: 600;
+  right: 25px;
+  width: 100px;
+  height: 150px;
+  text-align: center;
+  padding-top: 10px;
+  z-index: 1;
+  border-bottom: 10px;
+  background-color: #EA862E;
+  padding-left: 5px;
+  padding-right: 5px;
+
+
+  p{
+    border-bottom: #adacaa solid 2px;
+    padding-bottom: 2px;
+    margin-bottom: 3px;
+  }
+
+  img{
+    position: relative;
+    top: -28px;
+    right: 5px;
+  }
+}
