@@ -23,360 +23,446 @@
     -20%
 </div>
 
-<header>
-    <nav class="navbar navbar-light bg-light row">
-        <div class="col-md-2" id="page_label">
-            <p>
-                PIZZA KMA
-            </p>
-        </div>
-        <div class="col-md-10" id="info">
-            <div class="col-md-12" id="info_top">
-                <span id="phone_number">(044) 222 5 222</span>
-                <span id="delivery_info">24 години 7 днів на тиждень</span>
-                <span id="delivery_free">Безкоштовна доставка піци</span>
-                <button type="button" class="btn btn-primary btn-sm">Ввійти</button>
+<div id="page_content" class="row">
+    <div id="big_left" class="col-xs-7 col-sm-8 col-md-9">
+        <div class="row">
+            <header>
+                <nav class="row navbar navbar-light bg-light col-md-12">
+                    <div class="col-md-2" id="page_label">
+                        <p>
+                            PIZZA KMA
+                        </p>
+                    </div>
+                    <div class="col-md-10" id="info">
+                        <div class="row">
+                            <div class="col-md-12" id="info_top">
+                                <span id="phone_number" class="col-md-3">(044)-222-5-222</span>
+                                <span id="delivery_info" class="col-md-4">24 години 7 днів на тиждень</span>
+                                <span id="delivery_free" class="col-md-4">Безкоштовна доставка піци</span>
+                                <span id="enter_button" class="col-md-1">
+                                    <button type="button" class="btn btn-primary btn-sm">Ввійти</button>
+                                </span>
+                            </div>
+                            <div class="col-md-12" id="info_bottom">
+                                Піца
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div class="col-md-12" id="pizza_list">
+                <div class="row">
+                <div class="col-md-12" id="pizza_list_title">
+                    <span id="pizza_list_title_label">Усі піци</span>
+                    <span id="pizza_list_title_pizza_quantity">6</span>
+                </div>
+                <div class="col-md-12" id="filters">
+                    <div class="row">
+                        <span class="col-xs-6 col-sm-6 col-md-2"><span id="chosen_filter">Усі</span></span>
+                        <span class="col-xs-6 col-sm-6 col-md-2"><span>М'ясні</span></span>
+                        <span class="col-xs-6 col-sm-6 col-md-2"><span>З морепродуктами</span></span>
+                        <span class="col-xs-6 col-sm-6 col-md-2"><span>З грибами</span></span>
+                        <span class="col-xs-6 col-sm-6 col-md-2"><span>З ананасами</span></span>
+                        <span class="col-xs-6 col-sm-6 col-md-2"><span>Веган</span></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail pizza-card">
+                                <img src="assets/images/pizza_1.jpg">
+                                <div class="caption">
+                                    <h3>Імпреза</h3>
+                                    <small class="category">М'ясна піца</small>
+                                    <p>Балик, салямі, куриця, сир,
+                                        моцарелла, сир рокфорд, ананаси
+                                        томатна паста, петрушка
+                                    </p>
+                                    <div class="buy_options">
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="row">
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                                        <img src="assets/images/size-icon.svg"/>
+                                                        <span class="diameter_value">30</span>
+                                                    </span>
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                                        <img src="assets/images/weight.svg"/>
+                                                        <span class="weight_value">370</span>
+                                                    </span>
+                                                    <span class="col-xs-3 col-sm-12 col-md-12 price">99</span>
+                                                    <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                                                    <span class="col-xs-7 col-sm-12 col-md-12">
+                                                        <a href="#" class="btn btn-primary">Купити</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="row">
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                                        <img src="assets/images/size-icon.svg"/>
+                                                        <span class="diameter_value">30</span>
+                                                    </span>
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                                        <img src="assets/images/weight.svg"/>
+                                                        <span class="weight_value">370</span>
+                                                    </span>
+                                                    <span class="col-xs-3 col-sm-12 col-md-12 price">999</span>
+                                                    <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                                                    <span class="col-xs-7 col-sm-12 col-md-12">
+                                                        <a href="#" class="btn btn-primary">Купити</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail pizza-card">
+                                <img src="assets/images/pizza_2.jpg">
+                                <div class="caption">
+                                    <h3>BBQ</h3>
+                                    <small class="category">М'ясна піца</small>
+                                    <p>Мисливські ковбаски, ковбаски пепероні,
+                                        шинка, сир домашній, шампінйони,
+                                        петрушка, оливки
+                                    </p>
+                                    <div class="buy_options">
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="row">
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                                        <img src="assets/images/size-icon.svg"/>
+                                                        <span class="diameter_value">30</span>
+                                                    </span>
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                                        <img src="assets/images/weight.svg"/>
+                                                        <span class="weight_value">370</span>
+                                                    </span>
+                                                    <span class="col-xs-3 col-sm-12 col-md-12 price">99</span>
+                                                    <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                                                    <span class="col-xs-7 col-sm-12 col-md-12">
+                                                        <a href="#" class="btn btn-primary">Купити</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="row">
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                                        <img src="assets/images/size-icon.svg"/>
+                                                        <span class="diameter_value">30</span>
+                                                    </span>
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                                        <img src="assets/images/weight.svg"/>
+                                                        <span class="weight_value">370</span>
+                                                    </span>
+                                                    <span class="col-xs-3 col-sm-12 col-md-12 price">999</span>
+                                                    <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                                                    <span class="col-xs-7 col-sm-12 col-md-12">
+                                                        <a href="#" class="btn btn-primary">Купити</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail pizza-card">
+                                <img src="assets/images/pizza_3.jpg">
+                                <div class="caption">
+                                    <h3>Міксовий поло</h3>
+                                    <small class="category">М'ясна піца</small>
+                                    <p>Вітчина, куриця копчена,
+                                        сир моцарела, ананаси,
+                                        кукурудза, петрушка,
+                                        соус томатний
+                                    </p>
+                                    <div class="buy_options">
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="row">
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                                        <img src="assets/images/size-icon.svg"/>
+                                                        <span class="diameter_value">30</span>
+                                                    </span>
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                                        <img src="assets/images/weight.svg"/>
+                                                        <span class="weight_value">370</span>
+                                                    </span>
+                                                    <span class="col-xs-3 col-sm-12 col-md-12 price">99</span>
+                                                    <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                                                    <span class="col-xs-7 col-sm-12 col-md-12">
+                                                        <a href="#" class="btn btn-primary">Купити</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="row">
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                                        <img src="assets/images/size-icon.svg"/>
+                                                        <span class="diameter_value">30</span>
+                                                    </span>
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                                        <img src="assets/images/weight.svg"/>
+                                                        <span class="weight_value">370</span>
+                                                    </span>
+                                                    <span class="col-xs-3 col-sm-12 col-md-12 price">999</span>
+                                                    <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                                                    <span class="col-xs-7 col-sm-12 col-md-12">
+                                                        <a href="#" class="btn btn-primary">Купити</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail pizza-card">
+                                <img src="assets/images/pizza_2.jpg">
+                                <div class="caption">
+                                    <h3>BBQ</h3>
+                                    <small class="category">М'ясна піца</small>
+                                    <p>Мисливські ковбаски, ковбаски пепероні,
+                                        шинка, сир домашній, шампінйони,
+                                        петрушка, оливки
+                                    </p>
+                                    <div class="buy_options">
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="row">
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                                        <img src="assets/images/size-icon.svg"/>
+                                                        <span class="diameter_value">30</span>
+                                                    </span>
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                                        <img src="assets/images/weight.svg"/>
+                                                        <span class="weight_value">370</span>
+                                                    </span>
+                                                    <span class="col-xs-3 col-sm-12 col-md-12 price">99</span>
+                                                    <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                                                    <span class="col-xs-7 col-sm-12 col-md-12">
+                                                        <a href="#" class="btn btn-primary">Купити</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="row">
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                                        <img src="assets/images/size-icon.svg"/>
+                                                        <span class="diameter_value">30</span>
+                                                    </span>
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                                        <img src="assets/images/weight.svg"/>
+                                                        <span class="weight_value">370</span>
+                                                    </span>
+                                                    <span class="col-xs-3 col-sm-12 col-md-12 price">999</span>
+                                                    <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                                                    <span class="col-xs-7 col-sm-12 col-md-12">
+                                                        <a href="#" class="btn btn-primary">Купити</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail pizza-card">
+                                <img src="assets/images/pizza_2.jpg">
+                                <div class="caption">
+                                    <h3>BBQ</h3>
+                                    <small class="category">М'ясна піца</small>
+                                    <p>Мисливські ковбаски, ковбаски пепероні,
+                                        шинка, сир домашній, шампінйони,
+                                        петрушка, оливки
+                                    </p>
+                                    <div class="buy_options">
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="row">
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                                        <img src="assets/images/size-icon.svg"/>
+                                                        <span class="diameter_value">30</span>
+                                                    </span>
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                                        <img src="assets/images/weight.svg"/>
+                                                        <span class="weight_value">370</span>
+                                                    </span>
+                                                    <span class="col-xs-3 col-sm-12 col-md-12 price">99</span>
+                                                    <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                                                    <span class="col-xs-7 col-sm-12 col-md-12">
+                                                        <a href="#" class="btn btn-primary">Купити</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="row">
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                                        <img src="assets/images/size-icon.svg"/>
+                                                        <span class="diameter_value">30</span>
+                                                    </span>
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                                        <img src="assets/images/weight.svg"/>
+                                                        <span class="weight_value">370</span>
+                                                    </span>
+                                                    <span class="col-xs-3 col-sm-12 col-md-12 price">999</span>
+                                                    <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                                                    <span class="col-xs-7 col-sm-12 col-md-12">
+                                                        <a href="#" class="btn btn-primary">Купити</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail pizza-card">
+                                <img src="assets/images/pizza_2.jpg">
+                                <div class="caption">
+                                    <h3>BBQ</h3>
+                                    <small class="category">М'ясна піца</small>
+                                    <p>Мисливські ковбаски, ковбаски пепероні,
+                                        шинка, сир домашній, шампінйони,
+                                        петрушка, оливки
+                                    </p>
+                                    <div class="buy_options">
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="row">
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                                        <img src="assets/images/size-icon.svg"/>
+                                                        <span class="diameter_value">30</span>
+                                                    </span>
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                                        <img src="assets/images/weight.svg"/>
+                                                        <span class="weight_value">370</span>
+                                                    </span>
+                                                    <span class="col-xs-3 col-sm-12 col-md-12 price">99</span>
+                                                    <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                                                    <span class="col-xs-7 col-sm-12 col-md-12">
+                                                        <a href="#" class="btn btn-primary">Купити</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                                <div class="row">
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                                        <img src="assets/images/size-icon.svg"/>
+                                                        <span class="diameter_value">30</span>
+                                                    </span>
+                                                    <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                                        <img src="assets/images/weight.svg"/>
+                                                        <span class="weight_value">370</span>
+                                                    </span>
+                                                    <span class="col-xs-3 col-sm-12 col-md-12 price">999</span>
+                                                    <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                                                    <span class="col-xs-7 col-sm-12 col-md-12">
+                                                        <a href="#" class="btn btn-primary">Купити</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
-            <div class="col-md-12" id="info_bottom">
-                Піца
+            <div class="col-md-12" id="footr">
+                <small>
+                    Pizza KMA - практичний проект в межах курсу JavaScript в Києво-Иогилянській Академії
+                    <br>
+                    Доставка піци не здійснюється
+                </small>
             </div>
         </div>
-    </nav>
-</header>
-
-<div id="cart" class="col-md-3">
-    <div id="order_head">
+    </div>
+    <div id="big_right" class="col-xs-5 col-sm-4 col-md-3">
+        <div id="cart" class="col-xs-12 col-sm-12 col-md-12">
+            <div id="order_head">
                 <span id="label">
                     Замовлення
                 </span>
-        <span id="quantity">
+                <span id="quantity">
                     3
                 </span>
-        <span id="clear">
+                <span id="clear">
+                    <br>
                     Очистити замовлення
                 </span>
-    </div>
-    <div id="order">
-        <div class="row item">
-            <span class="col-md-12 item_name">BBQ(Мала)</span>
-            <span class="col-md-12 item_param">
-                        <img src="assets/images/size-icon.svg"/>
-                        <span class="diameter">30</span>
-                        <img src="assets/images/weight.svg"/>
-                        <span class="weight">460</span>
-                    </span>
-            <span class="col-md-12 item_quantity_and_buttons">
-                <span class="item_price">556грн</span>
-                <button type="button" class="btn btn-primary btn-sm plus_btn">&#43</button>
-                <span class="quantity">1</span>
-                <button type="button" class="btn btn-primary btn-sm minus_btn">&#8722</button>
-                <button type="button" class="btn btn-primary btn-sm cross_btn">&#215</button>
-            </span>
-        </div>
-        <div class="row item">
-            <span class="col-md-12 item_name">Россо густо(Мала)</span>
-            <span class="col-md-12 item_param">
+            </div>
+            <div id="order">
+                <div class="row item">
+                    <span class="col-xs-12 col-sm-12 col-md-12 item_name">Россо густо(Мала)</span>
+                    <span class="col-xs-12 col-sm-12 col-md-12 item_param">
                         <img src="assets/images/size-icon.svg"/>
                         <span class="diameter">30</span>
                         <img src="assets/images/weight.svg"/>
                         <span class="weight">400</span>
                     </span>
-            <span class="col-md-12 item_quantity_and_buttons">
-                <span class="item_price">556грн</span>
-                <button type="button" class="btn btn-primary btn-sm plus_btn">&#43</button>
-                <span class="quantity">1</span>
-                <button type="button" class="btn btn-primary btn-sm minus_btn">&#8722</button>
-                <button type="button" class="btn btn-primary btn-sm cross_btn">&#215</button>
-            </span>
-        </div>
-        <div class="row item">
-            <span class="col-md-12 item_name">Міксовий поло(Велика)</span>
-            <span class="col-md-12 item_param">
+                    <span class="col-xs-12 col-sm-12 col-md-12 item_quantity_and_buttons">
+                        <span class="item_price">556грн</span>
+                        <button type="button" class="btn btn-primary btn-sm minus_btn">&#8722</button>
+                        <span class="quantity">1</span>
+                        <button type="button" class="btn btn-primary btn-sm plus_btn">&#43</button>
+                        <button type="button" class="btn btn-primary btn-sm cross_btn">&#215</button>
+                        <img src="assets/images/pizza_2_preview.png" class="item_photo">
+                    </span>
+                </div>
+                <div class="row item">
+                    <span class="col-xs-12 col-sm-12 col-md-12 item_name">Россо густо(Мала)</span>
+                    <span class="col-xs-12 col-sm-12 col-md-12 item_param">
+                        <img src="assets/images/size-icon.svg"/>
+                        <span class="diameter">30</span>
+                        <img src="assets/images/weight.svg"/>
+                        <span class="weight">400</span>
+                    </span>
+                    <span class="col-xs-12 col-sm-12 col-md-12 item_quantity_and_buttons">
+                        <span class="item_price">556грн</span>
+                        <button type="button" class="btn btn-primary btn-sm minus_btn">&#8722</button>
+                        <span class="quantity">1</span>
+                        <button type="button" class="btn btn-primary btn-sm plus_btn">&#43</button>
+                        <button type="button" class="btn btn-primary btn-sm cross_btn">&#215</button>
+                        <img src="assets/images/pizza_2_preview.png" class="item_photo">
+                    </span>
+                </div>
+                <div class="row item">
+                    <span class="col-xs-12 col-sm-12 col-md-12 item_name">Міксовий поло(Велика)</span>
+                    <span class="col-xs-12 col-sm-12 col-md-12 item_param">
                         <img src="assets/images/size-icon.svg"/>
                         <span class="diameter">30</span>
                         <img src="assets/images/weight.svg"/>
                         <span class="weight">780</span>
                     </span>
-            <span class="col-md-12 item_quantity_and_buttons">
-                <span class="item_price">556грн</span>
-                <button type="button" class="btn btn-primary btn-sm plus_btn">&#43</button>
-                <span class="quantity">1</span>
-                <button type="button" class="btn btn-primary btn-sm minus_btn">&#8722</button>
-                <button type="button" class="btn btn-primary btn-sm cross_btn">&#215</button>
-            </span>
-        </div>
-    </div>
-    <div id="order_summary">
-        <span id="price_label">Сума замовлення</span>
-        <span id="order_price">88800</span>
-        <button type="button" id="order_button" class="btn btn-primary btn-lg btn-block">Замовити</button>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row" id="pizza_list">
-        <div class="col-md-9" id="all_pizza">
-            <span id="all_pizza_label">Усі піци</span>
-            <span id="all_pizza_quantity">6</span>
-        </div>
-        <div class="col-md-9" id="filters">
-            <span id="chosen_filter" class="filter">Усі</span>
-            <span class="filter">М'ясні</span>
-            <span class="filter">З морепродуктами</span>
-            <span class="filter">З грибами</span>
-        </div>
-        <div class="col-md-9">
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail pizza-card">
-                    <img src="assets/images/pizza_1.jpg">
-                    <div class="caption">
-                        <h3>Імпреза</h3>
-                        <small class="category">М'ясна піца</small>
-                        <p>Балик, салямі, куриця, сир,
-                            моцарелла, сир рокфорд, ананаси
-                            томатна паста, петрушка
-                        </p>
-                        <div class="row buy_options">
-                            <div class="col-md-6">
-                                <span class="col-md-12 diameter ">
-                                    <img src="assets/images/size-icon.svg"/>
-                                    <span class="diameter_value">30</span>
-                                </span>
-                                <span class="col-md-12 weight">
-                                    <img src="assets/images/weight.svg"/>
-                                    <span class="weight_value">370</span>
-                                </span>
-                                <span class="col-md-12 price">99</span>
-                                <small class="col-md-12 currency">грн</small>
-                                <a href="#" class="btn btn-primary">Купити</a>
-                            </div>
-                            <div class="col-md-6">
-                                <span class="col-md-12 diameter ">
-                                    <img src="assets/images/size-icon.svg"/>
-                                    <span class="diameter_value">30</span>
-                                </span>
-                                <span class="col-md-12 weight">
-                                    <img src="assets/images/weight.svg"/>
-                                    <span class="weight_value">370</span>
-                                </span>
-                                <span class="col-md-12 price">99</span>
-                                <small class="col-md-12 currency">грн</small>
-                                <a href="#" class="btn btn-primary">Купити</a>
-                            </div>
-                        </div>
-                    </div>
+                    <span class="col-xs-12 col-sm-12 col-md-12 item_quantity_and_buttons">
+                        <span class="item_price">556грн</span>
+                        <button type="button" class="btn btn-primary btn-sm minus_btn">&#8722</button>
+                        <span class="quantity">1</span>
+                        <button type="button" class="btn btn-primary btn-sm plus_btn">&#43</button>
+                        <button type="button" class="btn btn-primary btn-sm cross_btn">&#215</button>
+                        <img src="assets/images/pizza_2_preview.png" class="item_photo">
+                    </span>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail pizza-card">
-                    <img src="assets/images/pizza_2.jpg">
-                    <div class="caption">
-                        <h3>BBQ</h3>
-                        <small class="category">М'ясна піца</small>
-                        <p>Мисливські ковбаски, ковбаски пепероні,
-                            шинка, сир домашній, шампінйони,
-                            петрушка, оливки
-                        </p>
-                        <div class="row buy_options">
-                            <div class="col-md-6">
-                                <span class="col-md-12 diameter ">
-                                    <img src="assets/images/size-icon.svg"/>
-                                    <span class="diameter_value">30</span>
-                                </span>
-                                <span class="col-md-12 weight">
-                                    <img src="assets/images/weight.svg"/>
-                                    <span class="weight_value">370</span>
-                                </span>
-                                <span class="col-md-12 price">99</span>
-                                <small class="col-md-12 currency">грн</small>
-                                <a href="#" class="btn btn-primary">Купити</a>
-                            </div>
-                            <div class="col-md-6">
-                                <span class="col-md-12 diameter ">
-                                    <img src="assets/images/size-icon.svg"/>
-                                    <span class="diameter_value">30</span>
-                                </span>
-                                <span class="col-md-12 weight">
-                                    <img src="assets/images/weight.svg"/>
-                                    <span class="weight_value">370</span>
-                                </span>
-                                <span class="col-md-12 price">99</span>
-                                <small class="col-md-12 currency">грн</small>
-                                <a href="#" class="btn btn-primary">Купити</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail pizza-card">
-                    <img src="assets/images/pizza_3.jpg">
-                    <div class="caption">
-                        <h3>Міксовий поло</h3>
-                        <small class="category">М'ясна піца</small>
-                        <p>Вітчина, куриця копчена,
-                            сир моцарела, ананаси,
-                            кукурудза, петрушка,
-                            соус томатний
-                        </p>
-                        <div class="row buy_options">
-                            <div class="col-md-6">
-                                <span class="col-md-12 diameter ">
-                                    <img src="assets/images/size-icon.svg"/>
-                                    <span class="diameter_value">30</span>
-                                </span>
-                                <span class="col-md-12 weight">
-                                    <img src="assets/images/weight.svg"/>
-                                    <span class="weight_value">370</span>
-                                </span>
-                                <span class="col-md-12 price">99</span>
-                                <small class="col-md-12 currency">грн</small>
-                                <a href="#" class="btn btn-primary">Купити</a>
-                            </div>
-                            <div class="col-md-6">
-                                <span class="col-md-12 diameter ">
-                                    <img src="assets/images/size-icon.svg"/>
-                                    <span class="diameter_value">30</span>
-                                </span>
-                                <span class="col-md-12 weight">
-                                    <img src="assets/images/weight.svg"/>
-                                    <span class="weight_value">370</span>
-                                </span>
-                                <span class="col-md-12 price">99</span>
-                                <small class="col-md-12 currency">грн</small>
-                                <a href="#" class="btn btn-primary">Купити</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail pizza-card">
-                    <img src="assets/images/pizza_2.jpg">
-                    <div class="caption">
-                        <h3>BBQ</h3>
-                        <small class="category">М'ясна піца</small>
-                        <p>Мисливські ковбаски, ковбаски пепероні,
-                            шинка, сир домашній, шампінйони,
-                            петрушка, оливки
-                        </p>
-                        <div class="row buy_options">
-                            <div class="col-md-6">
-                                <span class="col-md-12 diameter ">
-                                    <img src="assets/images/size-icon.svg"/>
-                                    <span class="diameter_value">30</span>
-                                </span>
-                                <span class="col-md-12 weight">
-                                    <img src="assets/images/weight.svg"/>
-                                    <span class="weight_value">370</span>
-                                </span>
-                                <span class="col-md-12 price">99</span>
-                                <small class="col-md-12 currency">грн</small>
-                                <a href="#" class="btn btn-primary">Купити</a>
-                            </div>
-                            <div class="col-md-6">
-                                <span class="col-md-12 diameter ">
-                                    <img src="assets/images/size-icon.svg"/>
-                                    <span class="diameter_value">30</span>
-                                </span>
-                                <span class="col-md-12 weight">
-                                    <img src="assets/images/weight.svg"/>
-                                    <span class="weight_value">370</span>
-                                </span>
-                                <span class="col-md-12 price">99</span>
-                                <small class="col-md-12 currency">грн</small>
-                                <a href="#" class="btn btn-primary">Купити</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail pizza-card">
-                    <img src="assets/images/pizza_2.jpg">
-                    <div class="caption">
-                        <h3>BBQ</h3>
-                        <small class="category">М'ясна піца</small>
-                        <p>Мисливські ковбаски, ковбаски пепероні,
-                            шинка, сир домашній, шампінйони,
-                            петрушка, оливки
-                        </p>
-                        <div class="row buy_options">
-                            <div class="col-md-6">
-                                <span class="col-md-12 diameter ">
-                                    <img src="assets/images/size-icon.svg"/>
-                                    <span class="diameter_value">30</span>
-                                </span>
-                                <span class="col-md-12 weight">
-                                    <img src="assets/images/weight.svg"/>
-                                    <span class="weight_value">370</span>
-                                </span>
-                                <span class="col-md-12 price">99</span>
-                                <small class="col-md-12 currency">грн</small>
-                                <a href="#" class="btn btn-primary">Купити</a>
-                            </div>
-                            <div class="col-md-6">
-                                <span class="col-md-12 diameter ">
-                                    <img src="assets/images/size-icon.svg"/>
-                                    <span class="diameter_value">30</span>
-                                </span>
-                                <span class="col-md-12 weight">
-                                    <img src="assets/images/weight.svg"/>
-                                    <span class="weight_value">370</span>
-                                </span>
-                                <span class="col-md-12 price">99</span>
-                                <small class="col-md-12 currency">грн</small>
-                                <a href="#" class="btn btn-primary">Купити</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail pizza-card">
-                    <img src="assets/images/pizza_2.jpg">
-                    <div class="caption">
-                        <h3>BBQ</h3>
-                        <small class="category">М'ясна піца</small>
-                        <p>Мисливські ковбаски, ковбаски пепероні,
-                            шинка, сир домашній, шампінйони,
-                            петрушка, оливки
-                        </p>
-                        <div class="row buy_options">
-                            <div class="col-md-6">
-                                <span class="col-md-12 diameter ">
-                                    <img src="assets/images/size-icon.svg"/>
-                                    <span class="diameter_value">30</span>
-                                </span>
-                                <span class="col-md-12 weight">
-                                    <img src="assets/images/weight.svg"/>
-                                    <span class="weight_value">370</span>
-                                </span>
-                                <span class="col-md-12 price">99</span>
-                                <small class="col-md-12 currency">грн</small>
-                                <a href="#" class="btn btn-primary">Купити</a>
-                            </div>
-                            <div class="col-md-6">
-                                <span class="col-md-12 diameter ">
-                                    <img src="assets/images/size-icon.svg"/>
-                                    <span class="diameter_value">30</span>
-                                </span>
-                                <span class="col-md-12 weight">
-                                    <img src="assets/images/weight.svg"/>
-                                    <span class="weight_value">370</span>
-                                </span>
-                                <span class="col-md-12 price">99</span>
-                                <small class="col-md-12 currency">грн</small>
-                                <a href="#" class="btn btn-primary">Купити</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="order_summary">
+                <span id="price_label" class="col-xs-6 col-sm-6 col-md-6">Сума замовлення</span>
+                <span id="order_price" class="col-xs-6 col-sm-6 col-md-6">88800</span>
+                <button type="button" id="order_button" class="btn btn-primary btn-lg btn-block">Замовити</button>
             </div>
         </div>
     </div>
 </div>
-
 
 <!-- jQuery JavaScript -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -386,10 +472,5 @@
 
 <!--Own JavaScript -->
 <!--<script type="text/javascript"  src="assets/js/main.js"> </script>-->
-<footer>
-    Pizza KMA - практичний проект в межах курсу JavaScript в Києво-Иогилянській Академії
-    <br>
-    Доставка піци не здійснюється
-</footer>
 </body>
 </html>
