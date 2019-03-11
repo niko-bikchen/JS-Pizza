@@ -1,0 +1,142 @@
+#cart{
+
+  min-width: 250px;
+
+  padding-bottom: 10px;
+
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+  #order_head{
+
+    padding: 10px 5px 10px 5px;
+
+    #label{
+      padding: 5px;
+
+      color: black;
+      font-size: 1.3em;
+      font-weight: 700;
+      text-align: left;
+    }
+    #quantity{
+      padding: 5px 6px 5px 8px;
+
+      color: white;
+      text-align: center;
+
+      background-color: darkorange;
+      border-radius: 30px;
+    }
+    #clear{
+      padding: 10px;
+
+      color: grey;
+      font-size: 0.7em;
+    }
+  }
+
+  #order{
+    .item{
+
+      padding-top: 3%;
+      padding-bottom: 3%;
+
+      border-bottom: lightgrey solid 2px;
+      background-color: whitesmoke;
+
+      .item_name{
+        color:#fd4d0b;
+        font-size: 1.2em;
+        font-weight: 500;
+      }
+
+      .item_param{
+
+        padding-top: 2%;
+        padding-bottom: 2%;
+
+        font-weight: 600;
+
+        .diameter{
+          margin-right: 5%;
+        }
+      }
+
+      .item_price{
+        padding-right: 6%;
+        font-weight: 700;
+      }
+
+      .item_photo{
+        position: absolute;
+
+        right: 0%;
+        bottom: 6%;
+
+        height: 72px;
+        width: 32px;
+      }
+
+      .item_quantity_and_buttons{
+        .btn{
+          padding-left: 11px;
+          padding-right: 11px;
+
+          font-size: 1em;
+          font-weight: 600;
+
+          border: none;
+          border-radius: 20px;
+        }
+
+        .plus_btn{
+          background-color: limegreen;
+        }
+
+        .minus_btn{
+          background-color: red;
+        }
+
+        .cross_btn{
+          margin-left: 2%;
+
+          color: white;
+          font-size: 0.9em;
+
+          background-color: darkorange;
+          border: #fd4d0b 1px solid;
+        }
+
+        .quantity{
+          padding-right: 2%;
+          padding-left: 2%;
+        }
+      }
+    }
+  }
+
+  #order_summary{
+
+    padding-top: 10px;
+
+    #price_label{
+      padding-bottom: 10px;
+
+      font-weight: 600;
+      text-align: left;
+    }
+
+    #order_price{
+      font-weight: 600;
+      text-align: right;
+    }
+
+    #order_button{
+      margin-top: 10px;
+
+      background-color: darkorange;
+      border: none;
+    }
+  }
+}
