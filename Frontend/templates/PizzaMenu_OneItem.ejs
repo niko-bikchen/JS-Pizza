@@ -1,6 +1,4 @@
-<%
-
-function getIngredientsArray(pizza) {
+<% function getIngredientsArray(pizza) {
     //Отримує вміст піци
     var content = pizza.content;
     var result = [];
@@ -14,28 +12,94 @@ function getIngredientsArray(pizza) {
     });
 
     return result;
-}
+} %>
 
-   %>
-<div class="col-md-6 col-lg-4 pizza-card">
-    <div class="thumbnail">
-        <img class="pizza-icon" src="<%= pizza.icon %>" alt="Pizza">
-
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail pizza-card">
+        <img src="assets/images/pizza_1.jpg">
         <% if(pizza.is_new) { %>
         <span class="label label-danger">Нова</span>
         <% } else if(pizza.is_popular) {%>
         <span class="label label-success">Популярна</span>
         <% } %>
-
         <div class="caption">
-            <span class="title"><%= pizza.title %></span>
-            <div class="type"><%= pizza.type %></div>
-            <div class="description">
-                <%= getIngredientsArray(pizza).join(", ") %>
+            <h3><%= pizza.title %></h3>
+            <small class="type"><%= pizza.type %></small>
+            <p><%= getIngredientsArray(pizza).join(", ") %></p>
+            <div class="buy_options">
+                <div class="row">
+                    <% if (("small_size" in pizza) && ("big_size" in pizza)) { %>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="row">
+                            <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                <img src="assets/images/size-icon.svg" />
+                                <span class="diameter_value"><%= pizza.small_size.size %></span>
+                            </span>
+                            <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                <img src="assets/images/weight.svg" />
+                                <span class="weight_value"><%= pizza.small_size.weight %></span>
+                            </span>
+                            <span class="col-xs-3 col-sm-12 col-md-12 price"><%= pizza.small_size.price %></span>
+                            <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                            <span class="col-xs-7 col-sm-12 col-md-12">
+                                <button href="#" class="btn btn-primary buy_small">Купити</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="row">
+                            <span class="col-xs-12 col-sm-12 col-md-12 diameter ">
+                                <img src="assets/images/size-icon.svg" />
+                                <span class="diameter_value"><%= pizza.big_size.size %></span>
+                            </span>
+                            <span class="col-xs-12 col-sm-12 col-md-12 weight">
+                                <img src="assets/images/weight.svg" />
+                                <span class="weight_value"><%= pizza.big_size.weight %></span>
+                            </span>
+                            <span class="col-xs-3 col-sm-12 col-md-12 price"><%= pizza.big_size.price %></span>
+                            <small class="col-xs-2 col-sm-12 col-md-12 currency">грн</small>
+                            <span class="col-xs-7 col-sm-12 col-md-12">
+                                <button href="#" class="btn btn-primary buy_big">Купити</button>
+                            </span>
+                        </div>
+                    </div>
+                    <% } else if (!("small_size" in pizza)) { %>
+                    <div class="col-xs-12 col-sm-12 col-md-12 only_one_size">
+                        <div class="row">
+                            <span class="col-xs-6 col-sm-6 col-md-6 diameter ">
+                                <img src="assets/images/size-icon.svg" />
+                                <span class="diameter_value"><%= pizza.big_size.size %></span>
+                            </span>
+                            <span class="col-xs-6 col-sm-6 col-md-6 weight">
+                                <img src="assets/images/weight.svg" />
+                                <span class="weight_value"><%= pizza.big_size.weight %></span>
+                            </span>
+                            <span class="col-xs-6 col-sm-6 col-md-6 price"><%= pizza.big_size.price %></span>
+                            <small class="col-xs-6 col-sm-6 col-md-6 currency">грн</small>
+                            <button type="button" class="btn btn-primary btn-lg btn-block buy_big">Купити
+                                велику</button>
+                        </div>
+                    </div>
+                    <% } else if (!("big_size" in pizza)) { %>
+                    <div class="col-xs-12 col-sm-12 col-md-12 only_one_size">
+                        <div class="row">
+                            <span class="col-xs-6 col-sm-6 col-md-6 diameter ">
+                                <img src="assets/images/size-icon.svg" />
+                                <span class="diameter_value"><%= pizza.small_size.size %></span>
+                            </span>
+                            <span class="col-xs-6 col-sm-6 col-md-6 weight">
+                                <img src="assets/images/weight.svg" />
+                                <span class="weight_value"><%= pizza.small_size.weight %></span>
+                            </span>
+                            <span class="col-xs-6 col-sm-6 col-md-6 price"><%= pizza.small_size.price %></span>
+                            <small class="col-xs-6 col-sm-6 col-md-6 currency">грн</small>
+                            <button type="button" class="btn btn-primary btn-lg btn-block buy_small">Купити
+                                малу</button>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
             </div>
         </div>
-
-        <!-- Перед тим щоб показати кнопку необхідно переконатися, що піца має великий розмір -->
-        <button class="btn btn-primary buy-big">Купити велику</button>
     </div>
 </div>
