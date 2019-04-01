@@ -25,93 +25,102 @@
         -20%
     </div>
 
-    <div id="page_content" class="row">
-        <header>
-            <nav class="row navbar navbar-light bg-light col-md-12">
-                <div class="col-md-2" id="page_label">
-                    <p>
-                        PIZZA KMA
-                    </p>
-                </div>
-                <div class="col-md-10" id="info">
-                    <div class="row">
-                        <div class="col-md-12" id="info_top">
-                            <span id="phone_number" class="col-md-3">(044)222-5-222</span>
-                            <span id="delivery_info" class="col-md-4">24 години 7 днів на тиждень</span>
-                            <span id="delivery_free" class="col-md-4">Безкоштовна доставка піци</span>
-                            <span id="enter_button" class="col-md-1">
-                                <button type="button" class="btn btn-primary btn-sm">Ввійти</button>
-                            </span>
-                        </div>
-                        <div class="col-md-12" id="info_bottom">
-                            Піца
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <div id="big_left" class="col-xs-7 col-sm-8 col-md-9">
-            <div class="row">
+    <header>
+        <nav class="row navbar navbar-light bg-light">
+            <div class="col-md-2" id="page_label">
+                <p>
+                    PIZZA KMA
+                </p>
+            </div>
+            <div class="col-md-10" id="info">
                 <div class="row">
-                    <div class="col-md-12" id="pizza_list_title">
-                        <span id="pizza_list_title_label">Усі піци</span>
-                        <span id="pizza_list_title_pizza_quantity">6</span>
+                    <div class="col-md-12" id="info_top">
+                        <span id="phone_number" class="col-md-3">(044)222-5-222</span>
+                        <span id="delivery_info" class="col-md-4">24 години 7 днів на тиждень</span>
+                        <span id="delivery_free" class="col-md-4">Безкоштовна доставка піци</span>
+                        <span id="enter_button" class="col-md-1">
+                            <button type="button" class="btn btn-primary btn-sm">Ввійти</button>
+                        </span>
                     </div>
-                    <div class="col-md-12" id="filters">
-                        <div class="row">
-                            <span class="col-xs-6 col-sm-6 col-md-2"><a href="#" id="all"
-                                    class="chosen_filter">Усі</a></span>
-                            <span class="col-xs-6 col-sm-6 col-md-2"><a href="#" id="meat">М'ясні</a></span>
-                            <span class="col-xs-6 col-sm-6 col-md-4"><a href="#" id="seafood">З
-                                    морепродуктами</a></span>
-                            <span class="col-xs-6 col-sm-6 col-md-2"><a href="#" id="mushrooms">З грибами</a></span>
-                            <span class="col-xs-6 col-sm-6 col-md-2"><a href="#" id="pineapples">З ананасами</a></span>
-                        </div>
+                    <div class="col-md-12" id="info_bottom">
+                        Піца
                     </div>
                 </div>
-                <div class="col-md-12" id="pizza_list">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div id="page_content" class="row">
+            <div id="big_left" class="col-xs-7 col-sm-8 col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12" id="pizza_list_title">
+                                <span id="pizza_list_title_label">Піци</span>
+                                <span id="pizza_list_title_pizza_quantity">6</span>
+                            </div>
+                            <div class="col-md-12" id="filters">
+                                <div class="row">
+                                    <span class="col-xs-6 col-sm-6 col-md-2"><a href="#" id="all"
+                                            class="chosen_filter">Усі</a></span>
+                                    <span class="col-xs-6 col-sm-6 col-md-2"><a href="#" id="meat">М'ясні</a></span>
+                                    <span class="col-xs-6 col-sm-6 col-md-4"><a href="#" id="seafood">З
+                                            морепродуктами</a></span>
+                                    <span class="col-xs-6 col-sm-6 col-md-2"><a href="#" id="mushrooms">З
+                                            грибами</a></span>
+                                    <span class="col-xs-6 col-sm-6 col-md-2"><a href="#" id="pineapples">З
+                                            ананасами</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12" id="pizza_list">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="big_right" class="col-xs-5 col-sm-4 col-md-3">
-            <div id="cart" class="col-xs-12 col-sm-12 col-md-12">
-                <div id="order_head">
-                    <span id="label">
-                        Замовлення
-                    </span>
-                    <span id="quantity">
-                        0
-                    </span>
-                    <button id="clear">
-                        Очистити замовлення
-                    </button>
-                </div>
-                <div id="order">
-                </div>
-                <div id="order_summary">
-                    <div class="row">
-                        <span id="price_label" class="col-xs-6 col-sm-6 col-md-6">Сума замовлення</span>
-                        <span id="order_price" class="col-xs-6 col-sm-6 col-md-6">0</span>
-                        <button type="button" id="order_button"
-                            class="btn btn-primary btn-lg btn-block">Замовити</button>
+            <div id="big_right" class="col-xs-5 col-sm-4 col-md-3">
+                <div id="cart" class="col-xs-12 col-sm-12 col-md-12">
+                    <div id="order_head">
+                        <span id="label">
+                            Замовлення
+                        </span>
+                        <span id="quantity">
+                            0
+                        </span>
+                        <button id="clear">
+                            Очистити замовлення
+                        </button>
+                    </div>
+                    <div id="order">
+                    </div>
+                    <div id="order_summary">
+                        <div class="row">
+                            <span id="price_label" class="col-xs-6 col-sm-6 col-md-6">Сума замовлення</span>
+                            <span id="order_price" class="col-xs-6 col-sm-6 col-md-6">0</span>
+                            <a href="/order.html" id="order_button"
+                                class="btn btn-primary btn-lg btn-block">Замовити</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="col-xs-12 col-sm-12 col-md-12" id="footr">
-                Pizza KMA - практичний проект в межах курсу JavaScript в Києво-Иогилянській Академії
-                <br>
-                Доставка піци не здійснюється
-            </div>
-        </footer>
     </div>
+
+    <div class="footer">
+        <p>
+            Pizza KMA - практичний проект в межах курсу JavaScript в Києво-Иогилянській Академії
+            <br>
+            Доставка піци не здійснюється
+        </p>
+    </div>
+
     <!-- jQuery JavaScript -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 

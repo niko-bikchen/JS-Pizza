@@ -1,0 +1,68 @@
+<% include common/header.ejs %>
+
+    <div id="discount_label">
+        <img src="assets/images/discount.svg" />
+        <p>
+            Цього тижня на все
+        </p>
+        -20%
+    </div>
+
+<div id="page_content" class="row">
+    <div id="big_left" class="col-xs-7 col-sm-8 col-md-9">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-12" id="pizza_list_title">
+                    <span id="pizza_list_title_label">Піци</span>
+                    <span id="pizza_list_title_pizza_quantity">6</span>
+                </div>
+                <div class="col-md-12" id="filters">
+                    <div class="row">
+                        <span class="col-xs-6 col-sm-6 col-md-2"><a href="#" id="all"
+                                class="chosen_filter">Усі</a></span>
+                        <span class="col-xs-6 col-sm-6 col-md-2"><a href="#" id="meat">М'ясні</a></span>
+                        <span class="col-xs-6 col-sm-6 col-md-4"><a href="#" id="seafood">З
+                                морепродуктами</a></span>
+                        <span class="col-xs-6 col-sm-6 col-md-2"><a href="#" id="mushrooms">З грибами</a></span>
+                        <span class="col-xs-6 col-sm-6 col-md-2"><a href="#" id="pineapples">З ананасами</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" id="pizza_list">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="big_right" class="col-xs-5 col-sm-4 col-md-3">
+        <div id="cart" class="col-xs-12 col-sm-12 col-md-12">
+            <div id="order_head">
+                <span id="label">
+                    Замовлення
+                </span>
+                <span id="quantity">
+                    0
+                </span>
+                <button id="clear">
+                    Очистити замовлення
+                </button>
+            </div>
+            <div id="order">
+            </div>
+            <div id="order_summary">
+                <div class="row">
+                    <span id="price_label" class="col-xs-6 col-sm-6 col-md-6">Сума замовлення</span>
+                    <span id="order_price" class="col-xs-6 col-sm-6 col-md-6">0</span>
+                    <a href="/order.html" id="order_button" class="btn btn-primary btn-lg btn-block">Замовити</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<% include common/footer.ejs %>

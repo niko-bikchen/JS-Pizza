@@ -4,6 +4,7 @@
 @import "cart";
 @import "header";
 @import "discount_label";
+@import "orderPage";
 
 @font-face {
   font-family: "Air America";
@@ -45,7 +46,8 @@ body{
 #pizza_list_title{
 
   margin-bottom: 15px;
-
+  margin-top: 20px;
+  
   text-align: center;
 
   #pizza_list_title_label{
@@ -69,11 +71,25 @@ body{
 
   margin-bottom: 20px;
 
-  color: darkorange;
   text-align: center;
 
-  border: none;
-  outline: none;
+  a{
+    color: darkorange;
+    text-decoration: none;
+  }
+
+  a:hover.chosen_filter {
+    background-color: darkorange;
+    padding: 5px 10px 5px 10px;
+  }
+
+  a:hover {
+    padding: 5px 10px 5px 10px;
+
+    background-color: rgb(233, 233, 233);
+
+    border-radius: 5px;
+  }
 
   .chosen_filter{
     padding: 5px 10px 5px 10px;
@@ -88,14 +104,19 @@ body{
 
 #pizza_list{
   padding-left: 50px;
+  margin-bottom: 50px;
 }
 
-#footr{
-  margin-bottom: 10px;
+.footer{
+  min-height: 100%;
+
+  margin-bottom: -50px;
   padding-top: 10px;
+  margin-top: 15px;
 
   color: darkgrey;
   text-align: center;
+  background-color: white;
 
   border-top: darkgrey solid 1px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);

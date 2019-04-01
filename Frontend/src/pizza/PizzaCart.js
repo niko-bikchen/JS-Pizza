@@ -52,6 +52,8 @@ function addToCart(pizza, size) {
         Cart[index].quantity += 1;
     }
 
+    $cart.find("#order_button").removeClass("disabled");
+
     //Оновити вміст кошика на сторінці
     updateCart();
 }
@@ -67,6 +69,10 @@ function removeFromCart(cart_item) {
 
     Cart = filtered;
 
+    if (Cart.length == 0) {
+        $cart.find("#order_button").addClass("disabled");
+    }
+
     //Після видалення оновити відображення
     updateCart();
 }
@@ -75,6 +81,7 @@ function initialiseCart() {
     //Фукнція віпрацьвуватиме при завантаженні сторінки
 
     var order_contents = JSON.parse(localStorage.getItem("order_contents"));
+    $cart.find("#order_button").addClass("disabled");
 
     if (order_contents === null) {
         localStorage.setItem("order_contents", JSON.stringify(Cart));
@@ -82,11 +89,15 @@ function initialiseCart() {
         localStorage.setItem("order_size", $cart.find("#order_head #quantity").text());
     } else {
         Cart = order_contents;
+        if (Cart.length != 0) {
+            $cart.find("#order_button").removeClass("disabled");
+        }
         $cart.find("#order_summary #order_price").text(localStorage.getItem("order_price"));
         $cart.find("#order_head #quantity").text(localStorage.getItem("order_size"));
     }
 
     $cart.find("#clear").on("click", function () {
+        $cart.find("#order_button").addClass("disabled");
         Cart = [];
         $cart.find("#order_head #quantity").text(0);
         $cart.find("#order_summary #order_price").text(0);
@@ -149,7 +160,7 @@ function updateCart() {
 
         $cart.find("#order").append($node);
     }
-    
+
     localStorage.setItem("order_contents", JSON.stringify(Cart));
     localStorage.setItem("order_price", $cart.find("#order_summary #order_price").text());
     localStorage.setItem("order_size", $cart.find("#order_head #quantity").text());
