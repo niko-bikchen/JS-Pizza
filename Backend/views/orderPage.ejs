@@ -1,6 +1,6 @@
 <%include common/header.ejs%>
 
-<div class="container-fluid" id="page_content">
+<div class="container-fluid" id="order_page_content">
     <div id="big_left" class="col-xs-7 col-sm-8 col-md-9">
         <div class="row" id="delivery_form">
             <h3 class="col-md-12">Контактні дані</h3>
@@ -37,7 +37,7 @@
                 </form>
             </div>
             <div class="col-md-5" id="delivery_details">
-                <div class="bs-callout bs-callout-warning">
+                <div class="bs-callout bs-callout-info">
                     <h4>Інформація про замовлення</h4>
                     <p class="delivery_details_time">
                         <b>Приблизний час доставки:</b> невідомий
@@ -46,6 +46,9 @@
                         <b>Адреса доставки:</b> невідома
                     </p>
                 </div>
+            </div>
+            <div class="col-md-12" style="text-align: right;">
+                <a href="#" id="proceed_btn" class="btn btn-primary">Далі ></a>
             </div>
         </div>
     </div>
@@ -65,8 +68,7 @@
                     <div class="row">
                         <span id="price_label" class="col-xs-6 col-sm-6 col-md-6">Сума замовлення</span>
                         <span id="order_price" class="col-xs-6 col-sm-6 col-md-6">0</span>
-                        <a href="/" id="order_button"
-                            class="btn btn-primary btn-lg btn-block">Редагувати замовлення</a>
+                        <a href="/" id="order_button" class="btn btn-primary btn-lg btn-block">Редагувати</a>
                     </div>
                 </div>
             </div>
@@ -89,7 +91,6 @@
 
     <!--Own JavaScript -->
     <script type="text/javascript" src="assets/js/main.js"></script>
-    <script type="text/javascript" src="assets/js/orderPage.js"></script>
 </body>
 
 </html>

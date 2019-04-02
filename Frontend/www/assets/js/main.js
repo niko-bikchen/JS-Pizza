@@ -52,7 +52,7 @@ exports.PizzaMenu_OneItem = ejs.compile("<% function getIngredientsArray(pizza) 
 
 exports.PizzaCart_OneItem = ejs.compile("<div class=\"item\">\r\n    <div class=\"row\">\r\n        <span class=\"col-xs-12 col-sm-12 col-md-12 item_name\"><%= pizza.title %> (<%= size_name %>)</span>\r\n        <span class=\"col-xs-12 col-sm-12 col-md-12 item_param\">\r\n            <img src=\"assets/images/size-icon.svg\" />\r\n            <span class=\"diameter\"><%= pizza[size].size %></span>\r\n            <img src=\"assets/images/weight.svg\" />\r\n            <span class=\"weight\"><%= pizza[size].weight %></span>\r\n        </span>\r\n        <span class=\"col-xs-12 col-sm-12 col-md-12 item_quantity_and_buttons\">\r\n            <span class=\"item_price\"><%= pizza[size].price %> грн</span>\r\n            <button type=\"button\" class=\"btn btn-primary btn-sm minus_btn\">&#8722</button>\r\n            <span class=\"quantity\"><%= quantity %></span>\r\n            <button type=\"button\" class=\"btn btn-primary btn-sm plus_btn\">&#43</button>\r\n            <button type=\"button\" class=\"btn btn-primary btn-sm cross_btn\">&#215</button>\r\n            <img src=\"assets/images/pizza_2_preview.png\" class=\"item_photo\">\r\n        </span>\r\n    </div>\r\n</div>\r\n</div>");
 
-},{"ejs":7}],3:[function(require,module,exports){
+},{"ejs":8}],3:[function(require,module,exports){
 /**
  * Created by chaika on 25.01.16.
  */
@@ -60,14 +60,79 @@ exports.PizzaCart_OneItem = ejs.compile("<div class=\"item\">\r\n    <div class=
 $(function(){
     //This code will execute when the page is ready
     var PizzaCart = require('./pizza/PizzaCart');
+    var orderPage = require('./orderPage')
 
     require('./API').getPizzaList(function(error, data){
         require('./pizza/PizzaMenu').initialiseMenu(data);
     });
 
     PizzaCart.initialiseCart();
+    orderPage.initialize();
 });
-},{"./API":1,"./pizza/PizzaCart":4,"./pizza/PizzaMenu":5}],4:[function(require,module,exports){
+},{"./API":1,"./orderPage":4,"./pizza/PizzaCart":5,"./pizza/PizzaMenu":6}],4:[function(require,module,exports){
+var $cart = $("#order_cart");
+var $form = $(".form-horizontal");
+var $inputName = $form.find("#inputName");
+var $inputPhone = $form.find("#inputPhone");
+var $inputAddress = $form.find("#inputAddress");
+var $btn = $form.parent().parent().find("#proceed_btn");
+
+function initialize() {
+
+    $inputName.on("keyup", function () {
+        if (!(/^[А-яA-zІ-і]+$/.test($inputName.val()))) {
+            $inputName.parent().parent().addClass("has-error");
+            $inputName.parent().parent().find(".name-help-block").removeAttr("style");
+        } else {
+            $inputName.parent().parent().removeClass("has-error");
+            $inputName.parent().parent().addClass("has-success");
+            $inputName.parent().parent().find(".name-help-block").attr("style", "display: none;");
+        }
+    });
+
+    $inputPhone.on("keyup", function () {
+        if ($inputPhone.val().startsWith("0") && $inputPhone.val().length == 10) {
+            $inputPhone.parent().parent().removeClass("has-error");
+            $inputPhone.parent().parent().addClass("has-success");
+            $inputPhone.parent().parent().find(".phone-help-block").attr("style", "display: none;");
+        }
+        else if ($inputPhone.val().startsWith("+380") && $inputPhone.val().length == 13) {
+            $inputPhone.parent().parent().removeClass("has-error");
+            $inputPhone.parent().parent().addClass("has-success");
+            $inputPhone.parent().parent().find(".phone-help-block").attr("style", "display: none;");
+        }
+        else {
+            $inputPhone.parent().parent().addClass("has-error");
+            $inputPhone.parent().parent().find(".phone-help-block").removeAttr("style");
+        }
+    });
+
+    $btn.on("click", function () {
+        var name = null;
+        var phone = null;
+        var address = "";
+        if ($inputName.parent().parent().hasClass("has-success") && $inputPhone.parent().parent().hasClass("has-success")) {
+            name = $inputName.val();
+            phone = $inputPhone.val();
+            address = $inputAddress.val();
+
+            require('./API').createOrder({
+                name: name,
+                phone: phone,
+                address: address,
+                pizzas: localStorage.getItem("order_contents"),
+                price: localStorage.getItem("order_price")
+            }, function (error, data) {
+                if (data["success"]) {
+                    console.log("Data received successfully");
+                }
+            });
+        }
+    });
+}
+
+exports.initialize = initialize;
+},{"./API":1}],5:[function(require,module,exports){
 /**
  * Created by chaika on 02.02.16.
  */
@@ -245,7 +310,7 @@ exports.getPizzaInCart = getPizzaInCart;
 exports.initialiseCart = initialiseCart;
 
 exports.PizzaSize = PizzaSize;
-},{"../Templates":2}],5:[function(require,module,exports){
+},{"../Templates":2}],6:[function(require,module,exports){
 /**
  * Created by chaika on 02.02.16.
  */
@@ -342,9 +407,9 @@ function initialiseMenu(pizza_list) {
 }
 
 exports.initialiseMenu = initialiseMenu;
-},{"../Templates":2,"./PizzaCart":4}],6:[function(require,module,exports){
+},{"../Templates":2,"./PizzaCart":5}],7:[function(require,module,exports){
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /*
  * EJS Embedded JavaScript templates
  * Copyright 2112 Matthew Eernisse (mde@fleegix.org)
@@ -1285,7 +1350,7 @@ if (typeof window != 'undefined') {
   window.ejs = exports;
 }
 
-},{"../package.json":9,"./utils":8,"fs":6,"path":10}],8:[function(require,module,exports){
+},{"../package.json":10,"./utils":9,"fs":7,"path":11}],9:[function(require,module,exports){
 /*
  * EJS Embedded JavaScript templates
  * Copyright 2112 Matthew Eernisse (mde@fleegix.org)
@@ -1451,7 +1516,7 @@ exports.cache = {
   }
 };
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports={
   "_from": "ejs@^2.4.1",
   "_id": "ejs@2.6.1",
@@ -1532,7 +1597,7 @@ module.exports={
   "version": "2.6.1"
 }
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 (function (process){
 // .dirname, .basename, and .extname methods are extracted from Node.js v8.11.1,
 // backported and transplited with Babel, with backwards-compat fixes
@@ -1838,7 +1903,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":11}],11:[function(require,module,exports){
+},{"_process":12}],12:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
