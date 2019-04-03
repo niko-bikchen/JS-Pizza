@@ -37,19 +37,20 @@
                 </form>
             </div>
             <div class="col-md-5" id="delivery_details">
-                <div class="bs-callout bs-callout-info">
+                <div class="bs-callout bs-callout-warning">
                     <h4>Інформація про замовлення</h4>
                     <p class="delivery_details_time">
-                        <b>Приблизний час доставки:</b> невідомий
+                        <b>Приблизний час доставки:</b><span class="value"> невідомий</span>
                     </p>
                     <p class="delivery_details_address">
-                        <b>Адреса доставки:</b> невідома
+                        <b>Адреса доставки:</b><span class="value"> невідома</span>
                     </p>
                 </div>
             </div>
             <div class="col-md-12" style="text-align: right;">
                 <a href="#" id="proceed_btn" class="btn btn-primary">Далі ></a>
             </div>
+            <div class="col-md-12" id="googleMap"></div>
         </div>
     </div>
     <div id="big_right" class="col-xs-5 col-sm-4 col-md-3">
@@ -75,22 +76,4 @@
     </div>
 </div>
 
-<div class="footer">
-        <p>
-            Pizza KMA - практичний проект в межах курсу JavaScript в Києво-Иогилянській Академії
-            <br>
-            Доставка піци не здійснюється
-        </p>
-    </div>
-
-    <!-- jQuery JavaScript -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-    <!--Bootsrap JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <!--Own JavaScript -->
-    <script type="text/javascript" src="assets/js/main.js"></script>
-</body>
-
-</html>
+<%include common/footer.ejs%>
