@@ -127,7 +127,7 @@ function initialize() {
         if ($inputAddress.val().length > 0) {
             $inputAddress.parent().parent().removeClass("has-error");
             $inputAddress.parent().parent().addClass("has-success");
-            $inputAddress.parent().parent().find(".phone-help-block").attr("style", "display: none;");
+            $inputAddress.parent().parent().find(".address-help-block").attr("style", "display: none;");
         } else {
             $inputAddress.parent().parent().addClass("has-error");
             $inputAddress.parent().parent().find(".address-help-block").removeAttr("style");
