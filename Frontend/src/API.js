@@ -1,11 +1,10 @@
 /**
  * Created by chaika on 09.02.16.
  */
-var API_URL = "http://localhost:5050";
 
 function backendGet(url, callback) {
     $.ajax({
-        url: API_URL + url,
+        url: url,
         type: 'GET',
         success: function(data){
             callback(null, data);
@@ -18,7 +17,7 @@ function backendGet(url, callback) {
 
 function backendPost(url, data, callback) {
     $.ajax({
-        url: API_URL + url,
+        url: url,
         type: 'POST',
         contentType : 'application/json',
         data: JSON.stringify(data),
